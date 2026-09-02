@@ -1,0 +1,442 @@
+/* Body Area */
+body {
+  background-color: #ffdbbb;
+}
+
+/* Navigation Bar Area */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #F65314;
+  border-radius: 45px;
+  background-color: orangered;
+
+  position: fixed;
+  top: 8px;
+  left: 6px;
+  width: 99%;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-class ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 20px;
+}
+
+.header-class a {
+  text-decoration: none;
+  padding: 12px;
+  background-color: #ffe4c4;
+  border-radius: 26px;
+  display: block;
+  width: 75px;
+  text-align: center;
+  color: orangered;
+  font-size: 18px;
+  transition: 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.header-class a:hover {
+  transform: scale(1.1);
+}
+
+.left {
+  padding-left: 2%;
+  color: #ffe4c4;
+  font-weight: 1000;
+  font-style: normal;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.right {
+  padding-right: 2%;
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* main section */
+
+.main-section h2 {
+  color: orangered;
+  font-family: "Audiowide", sans-serif;
+  font-size: 60px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* =========================
+   About Page Content
+========================= */
+
+.main-section {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 170px;
+  padding-bottom: 60px;
+}
+
+
+/* =========================
+   About Introduction
+========================= */
+
+.about-intro {
+
+  width: 80%;
+
+  margin: 80px auto 40px;
+
+  padding: 30px;
+
+  background-color: #ffe4c4;
+
+  border: 2px solid #F65314;
+
+  border-radius: 25px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  box-sizing: border-box;
+}
+
+
+.about-intro h3 {
+
+  margin-top: 0;
+
+  color: orangered;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 38px;
+
+  text-align: center;
+}
+
+
+.about-intro p {
+
+  color: black;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =========================
+   Features Section
+========================= */
+
+.features-section {
+
+  width: 90%;
+
+  margin: 50px auto;
+
+  text-align: center;
+}
+
+
+.features-section h3 {
+
+  color: orangered;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 38px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   Feature Cards
+========================= */
+
+.feature-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: stretch;
+
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+
+
+.feature-card {
+
+  width: 220px;
+
+  min-height: 180px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background-color: #ffe4c4;
+
+  border: 2px solid #F65314;
+
+  border-radius: 20px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  transition: 0.3s ease;
+}
+
+
+.feature-card:hover {
+
+  transform: translateY(-8px) scale(1.02);
+
+  box-shadow:
+    rgba(0, 0, 0, 0.35) 0px 8px 20px;
+}
+
+
+.feature-card h4 {
+
+  color: orangered;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 25px;
+
+  margin-top: 0;
+
+  margin-bottom: 15px;
+}
+
+
+.feature-card p {
+
+  color: black;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  margin: 0;
+}
+
+
+/* =========================
+   Technology Section
+========================= */
+
+.technology-section {
+
+  width: 80%;
+
+  margin: 60px auto;
+
+  padding: 30px;
+
+  text-align: center;
+
+  background-color: #ffe4c4;
+
+  border: 2px solid #F65314;
+
+  border-radius: 25px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  box-sizing: border-box;
+}
+
+
+.technology-section h3 {
+
+  color: orangered;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 38px;
+
+  margin-top: 0;
+}
+
+
+.technology-section p {
+
+  color: black;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   Technology Tags
+========================= */
+
+.technology-container {
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+
+.technology-container span {
+
+  padding: 10px 20px;
+
+  background-color: orangered;
+
+  color: white;
+
+  border-radius: 20px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 4px 10px;
+
+  transition: 0.3s ease;
+}
+
+
+.technology-container span:hover {
+
+  transform: scale(1.08);
+
+  background-color: #F65314;
+}
+
+
+/* =========================
+   Mission Section
+========================= */
+
+.mission-section {
+
+  width: 80%;
+
+  margin: 60px auto;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background-color: #fff4e6;
+
+  border-radius: 25px;
+
+  border: 2px solid #F65314;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 5px 15px;
+
+  box-sizing: border-box;
+}
+
+
+.mission-section h3 {
+
+  color: orangered;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 38px;
+
+  margin-top: 0;
+}
+
+
+.mission-section p {
+
+  color: black;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  max-width: 750px;
+
+  margin: 15px auto;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 700px) {
+
+  .main-section {
+    width: 95%;
+  }
+
+
+  .about-intro,
+  .technology-section,
+  .mission-section {
+    width: 100%;
+  }
+
+
+  .feature-card {
+    width: 100%;
+  }
+
+
+  .header-class ul {
+    gap: 5px;
+  }
+
+
+  .header-class a {
+    width: 55px;
+    padding: 10px 5px;
+    font-size: 14px;
+  }
+}

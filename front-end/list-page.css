@@ -1,0 +1,414 @@
+/* =========================
+   Body area
+========================= */
+
+body {
+    background-color: #ffdbbb;
+}
+
+
+/* =========================
+   Navigation Bar CSS
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 2px solid #F65314;
+    border-radius: 45px;
+
+    background-color: orangered;
+
+    position: fixed;
+
+    top: 8px;
+    left: 6px;
+
+    width: 99%;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+.header-class ul {
+    display: flex;
+
+    flex-direction: row;
+
+    list-style: none;
+
+    gap: 20px;
+}
+
+
+.header-class a {
+    text-decoration: none;
+
+    padding: 12px;
+
+    background-color: #ffe4c4;
+
+    border-radius: 26px;
+
+    display: block;
+
+    width: 75px;
+
+    text-align: center;
+
+    color: orangered;
+
+    font-size: 18px;
+
+    transition: 0.5s ease;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+.header-class a:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.left {
+    padding-left: 2%;
+
+    color: #ffe4c4;
+
+    font-weight: 1000;
+
+    font-style: normal;
+
+    font-family: "Caveat", cursive;
+
+    font-optical-sizing: auto;
+
+    font-size: 30px;
+
+    text-shadow:
+        2px 2px 5px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   Right Navigation
+========================= */
+
+.right {
+    padding-right: 2%;
+
+    font-family: "Sekuya", system-ui;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    font-family: "Audiowide", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    font-family: "Caveat", cursive;
+
+    font-optical-sizing: auto;
+
+    font-family: "Madimi One", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+/* =========================
+   Display area
+========================= */
+
+.notes-main {
+
+    width: 80%;
+
+    margin: 150px auto 50px;
+
+    color: orangered;
+}
+
+
+.notes-main h1 {
+
+    text-align: center;
+
+    font-size: 35px;
+}
+
+
+/* =========================
+   Notes Container
+========================= */
+
+#notes-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   Individual Note Cards
+========================= */
+
+.note-card {
+
+    padding: 20px;
+
+    border: 2px solid #F65314;
+
+    border-radius: 20px;
+
+    background-color: #ffe4c4;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+.note-card h2 {
+
+    margin-top: 0;
+
+    color: orangered;
+}
+
+
+.note-card p {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    color: black;
+}
+
+
+/* =========================
+   Individual Note Popup
+========================= */
+
+#individual-note {
+
+    display: none;
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width: 500px;
+
+    height: 500px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background-color: #ffe4c4;
+
+    border: 2px solid #F65314;
+
+    border-radius: 20px;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   Individual Note Title
+========================= */
+
+#individual-title {
+
+    width: 90%;
+
+    padding: 12px 15px;
+
+    margin-bottom: 20px;
+
+    border: none;
+
+    border-bottom: 2px solid orangered;
+
+    outline: none;
+
+    background-color: transparent;
+
+    color: orangered;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Individual Note Content
+========================= */
+
+#individual-content {
+
+    width: 436px;
+
+    height: 291px;
+
+    padding: 15px;
+
+    border: 2px solid #F65314;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background-color: #fff4e6;
+
+    color: black;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    resize: none;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+    overflow-y: auto;
+}
+
+
+/* =========================
+   Editable State
+========================= */
+
+#individual-title[contenteditable="true"],
+#individual-content[contenteditable="true"] {
+
+    outline: 2px dashed orangered;
+
+    cursor: text;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+#edit-note,
+#save-note,
+#delete-note,
+#close-note {
+
+    padding: 10px 20px;
+
+    margin-top: 20px;
+
+    margin-left: 10px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: orangered;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   Button Hover
+========================= */
+
+#edit-note:hover,
+#save-note:hover,
+#delete-note:hover,
+#close-note:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+/* =========================
+   Focus Effect
+========================= */
+
+#individual-title:focus,
+#individual-content:focus {
+
+    box-shadow:
+        rgba(0, 0, 0, 0.20)
+        0px 5px 15px;
+}
+
+/* heading */
+
+.notes-main h1{
+    text-shadow: 2px 2px 5px
+    rgba(0, 0, 0, 0.35);
+    font-family: Arial, sans-serif;
+
+}
+
+#server-error{
+    all:initial;
+    text-shadow: 2px 2px 5px
+    rgba(0, 0, 0, 0.35);
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 217%;
+    color: orangered;
+
+}

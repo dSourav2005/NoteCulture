@@ -1,0 +1,418 @@
+/* =========================
+   Body area
+========================= */
+
+body {
+    background-color: #ffdbbb;
+}
+
+
+/* =========================
+   Navigation Bar CSS
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 2px solid #F65314;
+    border-radius: 45px;
+
+    background-color: orangered;
+
+    position: fixed;
+
+    top: 8px;
+    left: 6px;
+
+    width: 99%;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+
+    z-index: 1000;
+}
+
+
+.header-class ul {
+    display: flex;
+
+    flex-direction: row;
+
+    list-style: none;
+
+    gap: 20px;
+}
+
+
+.header-class a {
+    text-decoration: none;
+
+    padding: 12px;
+
+    background-color: #ffe4c4;
+
+    border-radius: 26px;
+
+    display: block;
+
+    width: 75px;
+
+    text-align: center;
+
+    color: orangered;
+
+    font-size: 18px;
+
+    transition: 0.5s ease;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+.header-class a:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.left {
+    padding-left: 2%;
+
+    color: #ffe4c4;
+
+    font-weight: 1000;
+
+    font-style: normal;
+
+    font-family: "Caveat", cursive;
+
+    font-optical-sizing: auto;
+
+    font-size: 30px;
+
+    text-shadow:
+        2px 2px 5px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   Right Navigation
+========================= */
+
+.right {
+    padding-right: 2%;
+
+    font-family: "Madimi One", sans-serif;
+
+    font-weight: 400;
+
+    font-style: normal;
+}
+
+
+/* =========================
+   Input Area
+========================= */
+
+.input-div {
+
+    width: 500px;
+
+    min-height: 500px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: #ffe4c4;
+
+    border: 2px solid #F65314;
+
+    border-radius: 40px;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+/* =========================
+   Add Notes Heading
+========================= */
+
+.input-div h2 {
+
+    color: orangered;
+
+    font-weight: 1000;
+
+    font-style: normal;
+
+    font-family: "Caveat", cursive;
+
+    font-optical-sizing: auto;
+
+    font-size: 40px;
+
+    text-shadow:
+        2px 2px 5px
+        rgba(0, 0, 0, 0.35);
+
+    margin: 0 0 20px 0;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+#noteForm {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   Title Input Section
+========================= */
+
+.input-div .title-input {
+
+    width: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    border: none;
+
+    height: auto;
+
+    margin: 0;
+}
+
+
+.title-input label {
+
+    color: orangered;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.title-input input {
+
+    width: 100%;
+
+    height: 45px;
+
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #F65314;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background-color: #fff4e6;
+
+    color: black;
+
+    font-size: 17px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s ease;
+}
+
+
+.title-input input:focus {
+
+    border-color: orangered;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.20)
+        0px 5px 15px;
+}
+
+
+/* =========================
+   Notes Input Section
+========================= */
+
+.input-div .notes-input {
+
+    width: 400px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    border: none;
+
+    height: auto;
+
+    margin: 0;
+}
+
+
+.notes-input label {
+
+    color: orangered;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.notes-input textarea {
+
+    width: 100%;
+
+    height: 180px;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+
+    border: 2px solid #F65314;
+
+    border-radius: 15px;
+
+    outline: none;
+
+    background-color: #fff4e6;
+
+    color: black;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    font-family: Arial, sans-serif;
+
+    resize: none;
+
+    overflow-y: auto;
+
+    transition: 0.3s ease;
+}
+
+
+.notes-input textarea:focus {
+
+    border-color: orangered;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.20)
+        0px 5px 15px;
+}
+
+
+/* =========================
+   Save Button
+========================= */
+
+.input-div button {
+
+    padding: 12px 25px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: orangered;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        rgba(0, 0, 0, 0.25)
+        0px 4px 10px;
+}
+
+
+.input-div button:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+        rgba(0, 0, 0, 0.35)
+        0px 5px 15px;
+}
+
+
+/* =========================
+   Save Message
+========================= */
+
+#save-message {
+
+    display: none;
+
+    margin: 0;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: green;
+
+    text-align: center;
+}

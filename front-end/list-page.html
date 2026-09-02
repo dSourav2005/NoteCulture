@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes page</title>
+  <link rel="stylesheet" href="list-page.css">
+</head>
+
+<body>
+  <!-- Navigation Bar Area -->
+  <header class="header-class">
+    <nav>
+      <h1 class="left">NoteCulture</h1>
+      <div class="right">
+        <ul>
+          <li><a href="home-page.html">Home</a></li>
+          <li><a href="notes-page.html">Notes</a></li>
+          <li><a href="list-page.html">List</a></li>
+          <li><a href="about-page.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- display notes area -->
+  <main class="notes-main">
+
+    <h1>My Notes</h1>
+
+    <div id="notes-container">
+
+      <!-- Notes will be added here using JavaScript -->
+       <span id="server-error">
+        Server not loaded....
+       </span>
+
+    </div>
+    <div id="individual-note">
+
+      <input type="text" id="individual-title" readonly>
+
+      <textarea id="individual-content" readonly></textarea>
+      <br>
+      <button id="save-note">Save</button>
+
+      <button id="edit-note">Edit</button>
+
+      <button id="delete-note">Delete</button>
+
+      <button id="close-note">Close</button>
+
+    </div>
+  </main>
+
+  <script src="list-page.js"></script>
+</body>
+
+</html>
