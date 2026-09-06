@@ -8,8 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static("../front-end/"));
-
 //create the note api
 app.post("/api/notes", async (req, res) => {
 
