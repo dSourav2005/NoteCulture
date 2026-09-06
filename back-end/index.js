@@ -1,16 +1,49 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import Note from "./models/note.model.js";
 
 const app = express();
 
+
+// --------------------------------------------------
+// Path configuration
+// --------------------------------------------------
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+// --------------------------------------------------
+// Middleware
+// --------------------------------------------------
+
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static("../front-end/"));
 
-//create the note api
+// Serve frontend files
+app.use(express.static(path.join(__dirname, "../front-end")));
+
+
+// --------------------------------------------------
+// Home page
+// --------------------------------------------------
+
+app.get("/", (req, res) => {
+    res.sendFile(
+        path.join(__dirname, "../front-end/home-page.html")
+    );
+});
+
+
+// --------------------------------------------------
+// CREATE NOTE
+// --------------------------------------------------
+
 app.post("/api/notes", async (req, res) => {
 
     try {
@@ -32,12 +65,18 @@ app.post("/api/notes", async (req, res) => {
 
 });
 
-//get the note api
+
+// --------------------------------------------------
+// GET NOTES
+// --------------------------------------------------
+
 app.get("/api/notes", async (req, res) => {
 
     try {
 
-        const notes = await Note.find().sort({ createdAt: 1 });
+        const notes = await Note.find().sort({
+            createdAt: 1
+        });
 
         res.status(200).json(notes);
 
@@ -51,24 +90,25 @@ app.get("/api/notes", async (req, res) => {
 
 });
 
-//update the note
+
+// --------------------------------------------------
+// UPDATE NOTE
+// --------------------------------------------------
+
 app.put("/api/notes/:id", async (req, res) => {
 
     try {
 
         const updateNote = await Note.findByIdAndUpdate(
             req.params.id,
-
             {
                 title: req.body.title,
                 content: req.body.content
             },
-
             {
                 new: true
             }
         );
-
 
         if (!updateNote) {
 
@@ -77,7 +117,6 @@ app.put("/api/notes/:id", async (req, res) => {
             });
 
         }
-
 
         res.status(200).json(updateNote);
 
@@ -91,17 +130,18 @@ app.put("/api/notes/:id", async (req, res) => {
 
 });
 
-//delete a note
+
+// --------------------------------------------------
 // DELETE NOTE
+// --------------------------------------------------
+
 app.delete("/api/notes/:id", async (req, res) => {
 
     try {
 
-        const deletedNote =
-            await Note.findByIdAndDelete(
-                req.params.id
-            );
-
+        const deletedNote = await Note.findByIdAndDelete(
+            req.params.id
+        );
 
         if (!deletedNote) {
 
@@ -111,11 +151,9 @@ app.delete("/api/notes/:id", async (req, res) => {
 
         }
 
-
         res.status(200).json({
             message: "Note deleted successfully"
         });
-
 
     } catch (error) {
 
@@ -127,19 +165,41 @@ app.delete("/api/notes/:id", async (req, res) => {
 
 });
 
-//mongodb connection
+
+// --------------------------------------------------
+// MONGODB CONNECTION
+// --------------------------------------------------
+
 const MONGO_URI = "mongodb+srv://sourav2005:Sou05d@nodejslearningbackend.czwwj9g.mongodb.net/Notes-Database?appName=NodeJsLearningBackend";
 
 mongoose
     .connect(MONGO_URI)
     .then(() => {
+
         console.log("Connected to MongoDB");
+
         const dbName = mongoose.connection.name;
+
         console.log("Data-Base: " + dbName);
-        app.listen(3000, () => {
-            console.log("Server running on port 3000");
+
+
+        // Use Render/Vercel provided port
+        const PORT = process.env.PORT || 3000;
+
+        app.listen(PORT, "0.0.0.0", () => {
+
+            console.log(
+                `Server running on port ${PORT}`
+            );
+
         });
+
     })
     .catch((error) => {
-        console.log("MongoDB connection failed:", error);
+
+        console.log(
+            "MongoDB connection failed:",
+            error
+        );
+
     });
