@@ -8,6 +8,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static("../front-end/"));
+
 //create the note api
 app.post("/api/notes", async (req, res) => {
 
@@ -126,7 +128,7 @@ app.delete("/api/notes/:id", async (req, res) => {
 });
 
 //mongodb connection
-const MONGO_URI = "mongodb+srv://sd6879777_db_user:1lYtEWCzAFYLq5jf@nodejslearningbackend.czwwj9g.mongodb.net/Notes-Database?appName=NodeJsLearningBackend";
+const MONGO_URI = "mongodb+srv://sourav2005:Sou05d@nodejslearningbackend.czwwj9g.mongodb.net/Notes-Database?appName=NodeJsLearningBackend";
 
 mongoose
     .connect(MONGO_URI)

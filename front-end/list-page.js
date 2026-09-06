@@ -28,7 +28,7 @@ async function getNotes() {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/notes"
+            "https://noteculture.onrender.com/api/notes"
         );
 
         const notes = await response.json();
@@ -182,7 +182,7 @@ saveNote.addEventListener("click", async () => {
         // Send PUT request
 
         const response = await fetch(
-            `http://localhost:3000/api/notes/${selectedNoteId}`,
+            `https://noteculture.onrender.com/api/notes/${selectedNoteId}`,
             {
 
                 method: "PUT",
@@ -297,7 +297,7 @@ deleteNote.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            `http://localhost:3000/api/notes/${selectedNoteId}`,
+            `https://noteculture.onrender.com/api/notes/${selectedNoteId}`,
             {
                 method: "DELETE"
             }
