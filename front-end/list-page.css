@@ -29,8 +29,7 @@ nav {
     width: 99%;
 
     box-shadow:
-        rgba(0, 0, 0, 0.35)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -67,8 +66,7 @@ nav {
     transition: 0.5s ease;
 
     box-shadow:
-        rgba(0, 0, 0, 0.35)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -97,8 +95,7 @@ nav {
     font-size: 30px;
 
     text-shadow:
-        2px 2px 5px
-        rgba(0, 0, 0, 0.35);
+        2px 2px 5px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -184,8 +181,7 @@ nav {
     background-color: #ffe4c4;
 
     box-shadow:
-        rgba(0, 0, 0, 0.35)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -239,8 +235,7 @@ nav {
     border-radius: 20px;
 
     box-shadow:
-        rgba(0, 0, 0, 0.35)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     overflow: visible;
 }
@@ -370,8 +365,7 @@ nav {
     transform: scale(1.05);
 
     box-shadow:
-        rgba(0, 0, 0, 0.35)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
@@ -383,23 +377,20 @@ nav {
 #individual-content:focus {
 
     box-shadow:
-        rgba(0, 0, 0, 0.20)
-        0px 5px 15px;
+        rgba(0, 0, 0, 0.20) 0px 5px 15px;
 }
 
 /* heading */
 
-.notes-main h1{
-    text-shadow: 2px 2px 5px
-    rgba(0, 0, 0, 0.35);
+.notes-main h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
     font-family: Arial, sans-serif;
 
 }
 
-#server-error{
-    all:initial;
-    text-shadow: 2px 2px 5px
-    rgba(0, 0, 0, 0.35);
+#server-error {
+    all: initial;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
     font-family: Arial, sans-serif;
     font-weight: bolder;
 
@@ -410,5 +401,250 @@ nav {
 
     font-size: 217%;
     color: orangered;
+
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        width: calc(100% - 16px);
+        left: 8px;
+        top: 8px;
+        padding: 8px 12px;
+    }
+
+    .left {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+
+    .header-class ul {
+        gap: 8px;
+        padding: 0;
+    }
+
+    .header-class a {
+        width: auto;
+        min-width: 60px;
+        padding: 9px 10px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        position: fixed;
+        width: calc(100% - 16px);
+        left: 8px;
+        top: 8px;
+
+        flex-direction: column;
+        align-items: center;
+
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .left {
+        font-size: 25px;
+        padding: 0;
+        margin: 5px 0 10px;
+    }
+
+    .right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-class ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 7px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-class li {
+        flex: 1;
+    }
+
+    .header-class a {
+        width: 100%;
+        padding: 8px 5px;
+        font-size: 14px;
+    }
+
+
+    /* Main content */
+
+    .notes-main,
+    .main-section {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Headings */
+
+    .notes-main h1 {
+        font-size: 28px;
+    }
+
+
+    /* Note cards */
+
+    .note-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .note-card h2 {
+        font-size: 22px;
+        word-wrap: break-word;
+    }
+
+    .note-card p {
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+
+    /* Individual note popup */
+
+    #individual-note {
+        width: 92%;
+        height: auto;
+        max-height: 85vh;
+
+        padding: 20px;
+
+        overflow-y: auto;
+    }
+
+    #individual-title {
+        width: 100%;
+        font-size: 22px;
+    }
+
+    #individual-content {
+        width: 100%;
+        height: 220px;
+        font-size: 16px;
+    }
+
+
+    /* Popup buttons */
+
+    #edit-note,
+    #save-note,
+    #delete-note,
+    #close-note {
+        margin-left: 3px;
+        margin-right: 3px;
+        margin-top: 12px;
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+
+    /* Create note form */
+
+    .input-div {
+        width: 92%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .title-input input,
+    .notes-input textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* About page heading */
+
+    .main-section h2 {
+        font-size: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+   ========================= */
+
+@media screen and (max-width: 400px) {
+
+    .left {
+        font-size: 22px;
+    }
+
+    .header-class a {
+        font-size: 12px;
+        padding: 7px 4px;
+    }
+
+    .notes-main h1 {
+        font-size: 25px;
+    }
+
+    #individual-note {
+        width: 94%;
+        padding: 15px;
+    }
+
+    #individual-content {
+        height: 200px;
+    }
+
+    #edit-note,
+    #save-note,
+    #delete-note,
+    #close-note {
+        padding: 8px 9px;
+        font-size: 13px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
 
 }
